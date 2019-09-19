@@ -21,6 +21,7 @@
 
 	function closeConnection($con = ''){
 		$con->close();
+		echo "Connection Closed";
 	}
 
 	
