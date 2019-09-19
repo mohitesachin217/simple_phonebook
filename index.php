@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="style.css"/>
 <?php 
 	require "db.php";
 	require "functions.php";
@@ -8,35 +8,7 @@
 	$numbers = listNumbers($con);
 ?>
 <style>
-	.tr, tr {
-    	border-bottom: 1px solid #ddd;
-	}
-	table{
-		border:1px solid black;
-	}
-	table tr td{
-		border-right:30px solid #fff;
-		border-left:30px solid #fff
-	}
-	tr:nth-child(even){
-		background:#ccc;
-		color:#669;
-	}
-	tr:nth-child(odd){
-		background:#f7f7f7;
-	}
-	table thead tr th{
-	    font-weight: 400;
-	    font-size: 14px;
-	    border-bottom: 2px solid #6678b1;
-	    border-right: 30px solid #fff;
-	    border-left: 30px solid #fff;
-	    color: #039;
-	    padding: 8px 2px;
-	}
-	td{
-		text-align:center;
-	}
+	
 </style>
 
 <a href="add.php">Add</a>

@@ -1,0 +1,49 @@
+	.container{
+		margin:20px 50px;
+		width:500px;
+	}
+
+	input{
+		width:100%;
+    	line-height: 30px;
+    	border-radius: 5px;
+    	border: 1px solid #ccc;
+    	color: #669;
+    	font-size: 25px;
+	}
+	label{
+		display:inline-block;
+	}
+	.form-control-wrapper{
+		text-align:left;
+		margin-bottom:0.5rem;
+	}
+	tr {
+    	border-bottom: 1px solid #ddd;
+	}
+	table{
+		border:1px solid black;
+	}
+	table tr td{
+		border-right:30px solid #fff;
+		border-left:30px solid #fff
+	}
+	tr:nth-child(even){
+		background:#ccc;
+		color:#669;
+	}
+	tr:nth-child(odd){
+		background:#f7f7f7;
+	}
+	table thead tr th{
+	    font-weight: 400;
+	    font-size: 14px;
+	    border-bottom: 2px solid #6678b1;
+	    border-right: 30px solid #fff;
+	    border-left: 30px solid #fff;
+	    color: #039;
+	    padding: 8px 2px;
+	}
+	td{
+		text-align:center;
+	}
