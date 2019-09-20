@@ -7,7 +7,7 @@ Test php code for begineers.
 2. Edit contact - add.php
 3. Delete contact - delete.php
 4. List contact.  index.php
-5. listing with pagination - index_ph.php
+5. listing with pagination - index_pg.php
 6. with searching - index_search.php
 7. with ajax - index_ajax.php
 8. with boostrap - index_bootstrap.php
