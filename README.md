@@ -10,3 +10,6 @@ Test php code for begineers.
 
 
 Contacts simple CRUD operation
+
+
+Whole code is in php and html and no code in ajax or javascript or bootstrap is added here
