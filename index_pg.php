@@ -11,7 +11,6 @@
 </style>
 
 <a href="add.php">Add</a>
-<a href="index_pg.php">Listing with pagination</a>
 <center>
 
 	<table width="100%" >
@@ -35,11 +34,16 @@
 						<a href="delete.php?id=<?=$contact['id'];?>">Delete</a>
 					</td>
 				</tr>	
+
 				<?php
 			} ?>
-			
 		</tbody>
 	</table>
+		<center>
+			<div class="pagination-wrapper">
+				Showing 10 our of 100 page no 1
+			</div>
+	</center>
 </center>
 
 <?php 

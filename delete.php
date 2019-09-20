@@ -27,3 +27,4 @@ if($result){
 closeConnection();
 ?>
 <a href="index.php">Click to view contact list</a>
+<a href="index_pg.php">Click to view contact list with pagination</a>

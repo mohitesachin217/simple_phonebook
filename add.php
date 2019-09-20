@@ -58,7 +58,10 @@ if(isset($_GET['id']) && !empty($_GET)){
 		<input type="hidden" name="id" value="<?= @$id?$id:'';?>" />
 		<button type="submit" name="submit">SUBMIT</button>
 		<button type="reset" name="reset">RESET</button>
-		<a href="index.php">Click to view numbers</a>
+		<br/>
+		<a href="index.php">Click to view contacts</a>
+		<br/>
+		<a href="index.php">Click to view contacts with pagination</a>
 	</div>
 </form>
 </div>
