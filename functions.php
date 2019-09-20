@@ -57,4 +57,37 @@
 		return $resource;
 	}
 
+	/**
+	 * Get contact information 
+	 * @param  string $id contact id
+	 * @return Associtate array of the contact of that id
+	 */
+	function getContact($id = ''){
+		global $con;
+
+		$query = "SELECT * FROM phonebook WHERE id = '$id'";
+		$resource = mysqli_query($con,$query);
+		return $resource->fetch_assoc();
+	}
+
+
+	/**
+	 * Update contact number
+	 * @param  string $name   name of the contact
+	 * @param  string $mobile mobile number of the contact
+	 * @param  string $id     Id of the contact number in database
+	 * @return return resource boolean true if update is successful or else false if opration is unsuccessful  
+	 */
+	function updateNumber($name="",$mobile='',$id = ''){
+		global $con;
+		$query = "UPDATE phonebook SET name='$name', mobile = '$mobile' WHERE id = '$id'";
+		return $resource = mysqli_query($con,$query);
+	}
+
+
+	function deleteContact($id = ''){
+		global $con;
+		$query = "DELETE FROM phonebook WHERE id = '$id'";
+		return $resource = mysqli_query($con,$query);
+	}
 ?>

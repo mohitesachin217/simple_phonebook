@@ -3,9 +3,8 @@
 	require "db.php";
 	require "functions.php";
 
-
 	$con = openConnection();
-	$numbers = listNumbers($con);
+	$contacts = listNumbers($con);
 ?>
 <style>
 	
@@ -23,16 +22,16 @@
 			<th>Action</th>
 		</thead>
 		<tbody>
-			<?php foreach($numbers as $number){
+			<?php foreach($contacts as $contact){
 				?>
 				<tr>
-					<td><?= $number['id'];?></td>
-					<td><?= $number['name'];?></td>
-					<td><?= $number['mobile'];?></td>
-					<td><?= $number['status'];?></td>
+					<td><?= $contact['id'];?></td>
+					<td><?= $contact['name'];?></td>
+					<td><?= $contact['mobile'];?></td>
+					<td><?= $contact['status'];?></td>
 					<td>
-						<a href="edit.php">Edit</a>
-						<a href="delete.php">Delete</a>
+						<a href="add.php?id=<?=$contact['id'];?>">Edit</a>
+						<a href="delete.php?id=<?=$contact['id'];?>">Delete</a>
 					</td>
 				</tr>	
 				<?php
