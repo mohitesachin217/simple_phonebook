@@ -44,6 +44,18 @@
 	}
 
 	/**
+	 * get contacts from datbase
+	 * @param  string $con [description]
+	 * @return associate array of all records
+	 */
+	function listLimitNumbers($con = '',$start = 0,$limit = 10){
+
+		$query = "SELECT * FROM `phonebook` LIMIT $start,$limit ";
+		$resource = mysqli_query($con,$query);
+		return $resource->fetch_all(MYSQLI_ASSOC);
+	}
+
+	/**
 	 * Save contact to the database
 	 * @param  string $name   Name of the contact
 	 * @param  string $mobile mobile number of the contact
