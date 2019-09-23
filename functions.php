@@ -44,16 +44,42 @@
 	}
 
 	/**
+	 * Get total records in the database
+	 * @param  string $con [description]
+	 * @return int - number of total rows
+	 */
+	
+	function getCountRows($con = ''){
+		$query = "SELECT * FROM `phonebook`";
+		$resource = mysqli_query($con,$query);
+		return $resource->num_rows;
+	}
+
+	function getLimitCountRows($con = '', $pg = 1, $limit = LIMIT){
+		$pg--;
+		$start = $pg * 10;	
+		// $start = $start;
+		$query = "SELECT * FROM `phonebook` LIMIT $start,$limit ";
+		$resource = mysqli_query($con,$query);
+		return $resource->num_rows;
+	}
+
+
+	/**
 	 * get contacts from datbase
 	 * @param  string $con [description]
 	 * @return associate array of all records
 	 */
-	function listLimitNumbers($con = '',$start = 0,$limit = 10){
-
+	function listLimitNumbers($con = '', $pg = 1, $limit = LIMIT){
+	 
+	 	$pg--;
+		$start = $pg * 10;	
+		// $start = $start;
 		$query = "SELECT * FROM `phonebook` LIMIT $start,$limit ";
 		$resource = mysqli_query($con,$query);
 		return $resource->fetch_all(MYSQLI_ASSOC);
 	}
+
 
 	/**
 	 * Save contact to the database
